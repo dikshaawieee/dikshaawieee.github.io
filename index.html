@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diksha | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --accent-soft: #eef2ff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* Navbar */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 6%;
+    }
+    nav .logo { font-weight: 700; font-size: 1.2rem; color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 22px; }
+    nav ul a { color: var(--text); font-size: 0.95rem; }
+    nav ul a:hover { color: var(--accent); }
+
+    section { padding: 70px 6%; max-width: 1000px; margin: 0 auto; }
+    h2 {
+      font-size: 1.7rem; margin-bottom: 28px; position: relative;
+      padding-bottom: 10px;
+    }
+    h2::after {
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 50px; height: 4px; background: var(--accent); border-radius: 2px;
+    }
+
+    /* Hero */
+    .hero { padding-top: 90px; padding-bottom: 80px; }
+    .hero .hi { color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+    .hero h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 12px; }
+    .hero .role { font-size: 1.2rem; color: var(--muted); margin-bottom: 20px; }
+    .hero p { max-width: 560px; color: var(--muted); margin-bottom: 28px; }
+    .btn {
+      display: inline-block; padding: 12px 26px; border-radius: 8px;
+      font-weight: 600; margin-right: 10px; margin-bottom: 10px;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #4338ca; }
+    .btn-outline { border: 2px solid var(--accent); color: var(--accent); }
+    .btn-outline:hover { background: var(--accent-soft); }
+
+    /* Cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px;
+    }
+    .card h3 { margin-bottom: 6px; font-size: 1.1rem; }
+    .card .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
+
+    /* Skills */
+    .skill { margin-bottom: 16px; }
+    .skill-top { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 6px; }
+    .bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+    .bar span { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .tag {
+      background: var(--accent-soft); color: var(--accent);
+      padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;
+    }
+
+    /* Contact */
+    .contact-box { text-align: center; }
+    .contact-box p { color: var(--muted); margin-bottom: 20px; }
+
+    footer {
+      text-align: center; padding: 24px; color: var(--muted);
+      border-top: 1px solid var(--border); font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul { gap: 14px; }
+      nav ul a { font-size: 0.85rem; }
+      .hero h1 { font-size: 2.1rem; }
+      section { padding: 50px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Diksha</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <p class="hi">Hello, I am</p>
+    <h1>Diksha</h1>
+    <p class="role">Computer Engineering (AI Tools) Student</p>
+    <p>I am a diploma student who loves to learn web design and programming. I am looking for an internship where I can learn and grow.</p>
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <a href="#contact" class="btn btn-outline">Contact Me</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Diploma in Computer Engineering (AI Tools)</h3>
+        <p class="sub">DSEU Rajokri Campus | 2025 - 2028</p>
+        <p>Currently in 3rd semester. Learning programming, web design and AI tools.</p>
+      </div>
+      <div class="card">
+        <h3>Senior Secondary (12th)</h3>
+        <p class="sub">NIOS | Appearing April 2027</p>
+        <p>Studying along with my diploma.</p>
+      </div>
+      <div class="card">
+        <h3>Secondary (10th)</h3>
+        <p class="sub">CBSE | 2025</p>
+        <p>76.6% (Best of 5 subjects)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <div class="skill-top"><span>HTML and CSS</span><span>Basic</span></div>
+      <div class="bar"><span style="width: 45%"></span></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top"><span>C Programming</span><span>Learning</span></div>
+      <div class="bar"><span style="width: 40%"></span></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top"><span>AI Tools</span><span>Basic</span></div>
+      <div class="bar"><span style="width: 45%"></span></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top"><span>MS Office and Excel</span><span>Intermediate</span></div>
+      <div class="bar"><span style="width: 65%"></span></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top"><span>Canva and GIMP (basic editing)</span><span>Basic</span></div>
+      <div class="bar"><span style="width: 40%"></span></div>
+    </div>
+    <div class="tags">
+      <span class="tag">VS Code</span>
+      <span class="tag">Windows OS (Basic)</span>
+      <span class="tag">Quick Learner</span>
+      <span class="tag">Self-Learning</span>
+      <span class="tag">Hindi</span>
+      <span class="tag">English (Basic)</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p class="sub">HTML, CSS</p>
+        <p>A simple and responsive website with About, Skills, Projects and Contact sections.</p>
+      </div>
+      <div class="card">
+        <h3>Diploma Coursework</h3>
+        <p class="sub">HTML, CSS, C | DSEU Rajokri Campus</p>
+        <p>Built web pages such as Fresh Bites, Bright Future Foundation, a juice shop page with lists and a login page. Learned C programming up to functions and recursion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="card">
+      <h3>2nd Position in Class (Silver Medal)</h3>
+      <p class="sub">Class 9 | School</p>
+      <p>Secured 2nd position in class and received a certificate and a silver medal.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card contact-box">
+      <p>I would love to hear from you. Send me a message anytime.</p>
+      <p><strong>Email:</strong> dikshajaiswal20009@gmail.com</p>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dikshajaiswal20009@gmail.com" class="btn btn-primary" target="_blank" rel="noopener">Email Me</a>
+      <a href="https://github.com/dikshaawieee" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Diksha. All rights reserved.</footer>
+
+</body>
+</html>
